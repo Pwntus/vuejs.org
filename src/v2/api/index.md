@@ -385,12 +385,12 @@ type: api
 
 ### Vue.compile( template )
 
-- **Arguments:**
+- **Argument:**
   - `{string} template`
 
-- **Usage:**
+- **Användning:**
 
-  Compiles a template string into a render function. **Only available in the full build.**
+  Kompilerar en templatesträng (mallsträng) till en renderingsfunktion. **Endast tillgänglig i fullständig utgåva**.
 
   ``` js
   var res = Vue.compile('<div><span>{{ msg }}</span></div>')
@@ -404,7 +404,7 @@ type: api
   })
   ```
 
-- **See also:** [Render Functions](../guide/render-function.html)
+- **Läs även:** [Renderingsfunktioner](../guide/render-function.html)
 
 ### Vue.observable( object )
 
