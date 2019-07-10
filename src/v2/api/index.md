@@ -5,7 +5,7 @@ type: api
 
 ## Global konfiguration
 
-`Vue.config` är ett objekt som innehåller Vue's globala konfigurationer. Du kan modifiera dess egenskaper som är listade nedan före du startar din applikation.
+`Vue.config` är ett objekt som innehåller Vue's globala konfigurationer. Du kan modifiera dess egenskaper (properties) som är listade nedan före du startar din applikation.
 
 ### silent
 
@@ -41,7 +41,7 @@ type: api
   // Profile.options._my_option = 2
   ```
 
-  Definiera anpassade sammanfogningsstrategier för options.
+  Definiera anpassade sammanfogningsstrategier för alternativ (options).
 
   Sammanfogningsstrategien erhåller värdet av alternativet som är definierat på föräldra och barninstansen som det första och andra argumentet. Kontextinstansen av Vue skickas som det tredje argumentet.
 
@@ -80,9 +80,9 @@ type: api
   }
   ```
 
-  Tilldela en hanterare för ofångade fel som uppstått under komponentrendering och watchers. Hanteraren anropas med felet och Vue-instansen.
+  Tilldela en hanterare för ofångade fel som uppstått under komponentrendering och watchers (bevakare). Hanteraren anropas med felet och Vue-instansen.
 
-  > I 2.2.0+ kommer denna hook även fånga fel i lifecycle hooks i komponenter. När denna hook är `undefined` kommer fångade fel bli loggade med `console.error` istället för att krascha applikationen.
+  > I 2.2.0+ kommer denna hook (krok) även fånga fel i lifecycle hooks (livscykelkrokar) i komponenter. När denna hook är `undefined` kommer fångade fel bli loggade med `console.error` istället för att krascha applikationen.
 
   > I 2.4.0+ kommer denna hook även fånga fel som uppstår i anpassade Vue händelsehanterare.
 
