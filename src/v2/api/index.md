@@ -336,41 +336,41 @@ type: api
 
 ### Vue.component( id, [definition] )
 
-- **Arguments:**
+- **Argument:**
   - `{string} id`
   - `{Function | Object} [definition]`
 
-- **Usage:**
+- **Användning:**
 
-  Register or retrieve a global component. Registration also automatically sets the component's `name` with the given `id`.
+  Registrera eller motta en global komponent. Registrering sätter även automatiskt komponentens `name` med det givna `id`.
 
   ``` js
-  // register an extended constructor
+  // registrera en utvidgad konstruktor
   Vue.component('my-component', Vue.extend({ /* ... */ }))
 
-  // register an options object (automatically call Vue.extend)
+  // registrera ett alternativobjekt (anropa automatiskt Vue.extend)
   Vue.component('my-component', { /* ... */ })
 
-  // retrieve a registered component (always return constructor)
+  // motta en registrerad komponent (returnera alltid konstruktor)
   var MyComponent = Vue.component('my-component')
   ```
 
-- **See also:** [Components](../guide/components.html)
+- **Läs även:** [Komponenter](../guide/components.html)
 
 ### Vue.use( plugin )
 
-- **Arguments:**
+- **Argument:**
   - `{Object | Function} plugin`
 
-- **Usage:**
+- **Användning:**
 
-  Install a Vue.js plugin. If the plugin is an Object, it must expose an `install` method. If it is a function itself, it will be treated as the install method. The install method will be called with Vue as the argument.
+  Installera en Vue.js plugin (insticksprogram). Om plugin är ett objekt måste den exponera en `install` metod. Om den i själva verket är en funktion kommer den bli behandlad som install-metoden. Install-metoden anropas med Vue som argument.
 
-  This method has to be called before calling `new Vue()`
+  Denna metod måste anropas före man använder `new Vue()`.
 
-  When this method is called on the same plugin multiple times, the plugin will be installed only once.
+  När denna metod anropas på samma plugin flera gånger installeras den bara en gång.
 
-- **See also:** [Plugins](../guide/plugins.html)
+- **Läs även:** [Plugins](../guide/plugins.html)
 
 ### Vue.mixin( mixin )
 
