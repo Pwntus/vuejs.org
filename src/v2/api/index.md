@@ -283,16 +283,16 @@ type: api
 
 ### Vue.directive( id, [definition] )
 
-- **Arguments:**
+- **Argument:**
   - `{string} id`
   - `{Function | Object} [definition]`
 
-- **Usage:**
+- **Användning:**
 
-  Register or retrieve a global directive.
+  Registrera eller motta ett globalt direktiv.
 
   ``` js
-  // register
+  // registrera
   Vue.directive('my-directive', {
     bind: function () {},
     inserted: function () {},
@@ -301,16 +301,16 @@ type: api
     unbind: function () {}
   })
 
-  // register (function directive)
+  // registrera (funktionsdirektiv)
   Vue.directive('my-directive', function () {
-    // this will be called as `bind` and `update`
+    // detta anropas som `bind` och `update`
   })
 
-  // getter, return the directive definition if registered
+  // getter, returnera direktivdefinitionen om den är registrerad
   var myDirective = Vue.directive('my-directive')
   ```
 
-- **See also:** [Custom Directives](../guide/custom-directive.html)
+- **Läs även:** [Anpassade direktiv](../guide/custom-directive.html)
 
 ### Vue.filter( id, [definition] )
 
