@@ -178,25 +178,25 @@ type: api
 
   Sätt detta till `false` för att förhindra produktionstipset vid uppstart av Vue.
 
-## Global API
+## Globalt API
 
 ### Vue.extend( options )
 
-- **Arguments:**
+- **Argument:**
   - `{Object} options`
 
-- **Usage:**
+- **Användning:**
 
-  Create a "subclass" of the base Vue constructor. The argument should be an object containing component options.
+  Skapa en "subklass" från Vue baskonstruktor. Argumentet bör vara ett objekt som inehåller komponentalternativ.
 
-  The special case to note here is the `data` option - it must be a function when used with `Vue.extend()`.
+  Ett specialfall att notera här är `data` alternativet - det måste vara en funktion då det används med `Vue.extend()`.
 
   ``` html
   <div id="mount-point"></div>
   ```
 
   ``` js
-  // create constructor
+  // skapa konstruktor
   var Profile = Vue.extend({
     template: '<p>{{firstName}} {{lastName}} aka {{alias}}</p>',
     data: function () {
@@ -207,17 +207,17 @@ type: api
       }
     }
   })
-  // create an instance of Profile and mount it on an element
+  // skapa en Profile-instans och montera den på ett element
   new Profile().$mount('#mount-point')
   ```
 
-  Will result in:
+  Resulterar i detta:
 
   ``` html
   <p>Walter White aka Heisenberg</p>
   ```
 
-- **See also:** [Components](../guide/components.html)
+- **Läs även:** [Komponenter](../guide/components.html)
 
 ### Vue.nextTick( [callback, context] )
 
