@@ -437,9 +437,9 @@ type: api
 
 ### Vue.version
 
-- **Details**: Provides the installed version of Vue as a string. This is especially useful for community plugins and components, where you might use different strategies for different versions.
+- **Detaljer**: Innehåller versionsnummret till Vue-installationen i textform. Detta är speciellt användbart för communityplugins och komponenter där du kanske använder olika strategier för olika versionsnummer.
 
-- **Usage**:
+- **Användning**:
 
   ```js
   var version = Number(Vue.version.split('.')[0])
@@ -449,7 +449,7 @@ type: api
   } else if (version === 1) {
     // Vue v1.x.x
   } else {
-    // Unsupported versions of Vue
+    // Saknas stöd för detta versionsnummret av Vue
   }
   ```
 
