@@ -314,25 +314,25 @@ type: api
 
 ### Vue.filter( id, [definition] )
 
-- **Arguments:**
+- **Argument:**
   - `{string} id`
   - `{Function} [definition]`
 
-- **Usage:**
+- **Användning:**
 
-  Register or retrieve a global filter.
+  Registrera eller motta ett globalt filter.
 
   ``` js
-  // register
+  // registrera
   Vue.filter('my-filter', function (value) {
-    // return processed value
+    // returnera bearbetat värde
   })
 
-  // getter, return the filter if registered
+  // getter, returnera filtret om det är registrerat
   var myFilter = Vue.filter('my-filter')
   ```
 
-- **See also:** [Filters](../guide/filters.html)
+- **Läs även:** [Filter](../guide/filters.html)
 
 ### Vue.component( id, [definition] )
 
