@@ -168,15 +168,15 @@ type: api
 
 ### productionTip
 
-> New in 2.2.0+
+> Nytt i 2.2.0+
 
-- **Type:** `boolean`
+- **Typ:** `boolean`
 
-- **Default:** `true`
+- **Standardvärde:** `true`
 
-- **Usage**:
+- **Användning**:
 
-  Set this to `false` to prevent the production tip on Vue startup.
+  Sätt detta till `false` för att förhindra produktionstipset vid uppstart av Vue.
 
 ## Global API
 
