@@ -250,20 +250,20 @@ type: api
 
 ### Vue.set( target, propertyName/index, value )
 
-- **Arguments:**
+- **Argument:**
   - `{Object | Array} target`
   - `{string | number} propertyName/index`
   - `{any} value`
 
-- **Returns:** the set value.
+- **Returnerar:** det satta värdet.
 
-- **Usage:**
+- **Avändning:**
 
-  Adds a property to a reactive object, ensuring the new property is also reactive, so triggers view updates. This must be used to add new properties to reactive objects, as Vue cannot detect normal property additions (e.g. `this.myObject.newProperty = 'hi'`).
+  Lägger till en egenskap på ett reaktivt objekt och säkerställer att den nya egenskapen också är reaktiv, vilket utlöser uppdatering av view. Detta måste användas för att lägga till nya egenskaper på reaktiva objekt eftersom Vue inte kan detektera normala egenskapstillägg (t.ex. `this.myObject.newProperty = 'hi'`).
 
-  <p class="tip">The target object cannot be a Vue instance, or the root data object of a Vue instance.</p>
+  <p class="tip">Målobjektet kan inte vara en Vue-instans eller det översta dataobjektet av en Vue-instans.</p>
 
-- **See also:** [Reactivity in Depth](../guide/reactivity.html)
+- **Läs även:** [Fördjupning i reaktivitet](../guide/reactivity.html)
 
 ### Vue.delete( target, propertyName/index )
 
