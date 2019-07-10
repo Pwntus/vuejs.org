@@ -408,16 +408,16 @@ type: api
 
 ### Vue.observable( object )
 
-> New in 2.6.0+
+> Nytt i 2.6.0+
 
-- **Arguments:**
+- **Argument:**
   - `{Object} object`
 
-- **Usage:**
+- **Användning:**
 
-  Make an object reactive. Internally, Vue uses this on the object returned by the `data` function.
+  Gör ett objekt reaktivt. Internt använder Vue detta på objektet som returneras av `data`-funktionen.
 
-  The returned object can be used directly inside [render functions](../guide/render-function.html) and [computed properties](../guide/computed.html), and will trigger appropriate updates when mutated. It can also be used as a minimal, cross-component state store for simple scenarios:
+  Det returnerade objektet kan genast användas i [renderingsfunktioner](../guide/render-function.html) och [computed properties (beräknade variabler)](../guide/computed.html) och kommer utlösa ändamålsenliga uppdateringar vid förändring. Den kan även användas som en minimal lagringsplats på tvärs av komponenter för simpla scenarier:
 
   ``` js
   const state = Vue.observable({ count: 0 })
@@ -431,9 +431,9 @@ type: api
   }
   ```
 
-  <p class="tip">In Vue 2.x, `Vue.observable` directly mutates the object passed to it, so that it is equivalent to the object returned, as [demonstrated here](../guide/instance.html#Data-and-Methods). In Vue 3.x, a reactive proxy will be returned instead, leaving the original object non-reactive if mutated directly. Therefore, for future compatibility, we recommend always working with the object returned by `Vue.observable`, rather than the object originally passed to it.</p>
+  <p class="tip">I Vue 2.x kommer objektet som skickas till `Vue.observable` bli direkt förändrat så att det är identiskt med det returnerade objektet, vilket [demonstreras här](../guide/instance.html#Data-and-Methods). I Vue 3.x returneras en reaktiv proxy istället, vilket lämnar originalobjektet icke-reaktivt om det förändras direkt. Vi rekommenderar därför att alltid jobba mot det returnerade objektet från `Vue.observable` för framtida kompatibilitet, i motsats till objektet som ursprungligen skickas till den.</p>
 
-- **See also:** [Reactivity in Depth](../guide/reactivity.html)
+- **Läs även:** [Fördjupning i reaktivitet](../guide/reactivity.html)
 
 ### Vue.version
 
