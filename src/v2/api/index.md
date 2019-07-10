@@ -3,31 +3,31 @@ title: API
 type: api
 ---
 
-## Global Config
+## Global Konfiguration
 
-`Vue.config` is an object containing Vue's global configurations. You can modify its properties listed below before bootstrapping your application:
+`Vue.config` är ett objekt som innehåller Vue's globala konfigurationer. Du kan modifiera dess egenskaper som är listade nedan före du startar din applikation.
 
 ### silent
 
-- **Type:** `boolean`
+- **Typ:** `boolean`
 
-- **Default:** `false`
+- **Standardvärde:** `false`
 
-- **Usage:**
+- **Användning:**
 
   ``` js
   Vue.config.silent = true
   ```
 
-  Suppress all Vue logs and warnings.
+  Tysta alla logg- och varningsmeddelanden från Vue.
 
 ### optionMergeStrategies
 
-- **Type:** `{ [key: string]: Function }`
+- **Typ:** `{ [key: string]: Function }`
 
-- **Default:** `{}`
+- **Standardvärde:** `{}`
 
-- **Usage:**
+- **Användning:**
 
   ``` js
   Vue.config.optionMergeStrategies._my_option = function (parent, child, vm) {
@@ -41,52 +41,54 @@ type: api
   // Profile.options._my_option = 2
   ```
 
-  Define custom merging strategies for options.
+  Definiera anpassade sammanfogningsstrategier för options.
 
-  The merge strategy receives the value of that option defined on the parent and child instances as the first and second arguments, respectively. The context Vue instance is passed as the third argument.
+  Sammanfogningsstrategien erhåller värdet av alternativet som är definierat på föräldra och barninstansen som det första och andra argumentet. Kontextinstansen av Vue skickas som det tredje argumentet.
 
-- **See also:** [Custom Option Merging Strategies](../guide/mixins.html#Custom-Option-Merge-Strategies)
+- **Läs även:** [Anpassade Sammanfogningsstrategier För Alternativ](../guide/mixins.html#Custom-Option-Merge-Strategies)
 
 ### devtools
 
-- **Type:** `boolean`
+- **Typ:** `boolean`
 
-- **Default:** `true` (`false` in production builds)
+- **Standardvärde:** `true` (`false` i produktionsläge)
 
-- **Usage:**
+- **Användning:**
 
   ``` js
-  // make sure to set this synchronously immediately after loading Vue
+  // var noga med att sätta detta värdet synkront direkt efter att du startat Vue
   Vue.config.devtools = true
   ```
 
-  Configure whether to allow [vue-devtools](https://github.com/vuejs/vue-devtools) inspection. This option's default value is `true` in development builds and `false` in production builds. You can set it to `true` to enable inspection for production builds.
+  Konfigurera huruvida inspektion av [vue-devtools](https://github.com/vuejs/vue-devtools) tillåts.
+  
+  Standardvärdet av detta alternativet är `true` i utvecklingsläge och `false` i produktionsläge. Du kan sätta det till `true` för att tillåta inspektion i produktionsläge.
 
 ### errorHandler
 
-- **Type:** `Function`
+- **Typ:** `Function`
 
-- **Default:** `undefined`
+- **Standardvärde:** `undefined`
 
-- **Usage:**
+- **Användning:**
 
   ``` js
   Vue.config.errorHandler = function (err, vm, info) {
-    // handle error
-    // `info` is a Vue-specific error info, e.g. which lifecycle hook
-    // the error was found in. Only available in 2.2.0+
+    // felhantering
+    // `info` är ett Vue-specifikt felmeddelande, t.ex. vilken lifecycle hook
+    // felet uppstod i. Endast tillgänglig i 2.2.0+
   }
   ```
 
-  Assign a handler for uncaught errors during component render function and watchers. The handler gets called with the error and the Vue instance.
+  Tilldela en hanterare för ofångade fel som uppstått under komponentrendering och watchers. Hanteraren anropas med felet och Vue-instansen.
 
-  > In 2.2.0+, this hook also captures errors in component lifecycle hooks. Also, when this hook is `undefined`, captured errors will be logged with `console.error` instead of crashing the app.
+  > I 2.2.0+ kommer denna hook även fånga fel i lifecycle hooks i komponenter. När denna hook är `undefined` kommer fångade fel bli loggade med `console.error` istället för att krascha applikationen.
 
-  > In 2.4.0+, this hook also captures errors thrown inside Vue custom event handlers.
+  > I 2.4.0+ kommer denna hook även fånga fel som uppstår i anpassade Vue händelsehanterare.
 
-  > In 2.6.0+, this hook also captures errors thrown inside `v-on` DOM listeners. In addition, if any of the covered hooks or handlers returns a Promise chain (e.g. async functions), the error from that Promise chain will also be handled.
+  > I 2.6.0+ kommer denna hook även fånga fel som uppstår i `v-on` DOM lyssnare. Om någon av de gällande hookarna eller hanterarna returnerar en Promise-kedja, kommer felet från kedjan även bli hanterat.
 
-  > Error tracking services [Sentry](https://sentry.io/for/vue/) and [Bugsnag](https://docs.bugsnag.com/platforms/browsers/vue/) provide official integrations using this option.
+  > Felsökningstjänsterna [Sentry](https://sentry.io/for/vue/) och [Bugsnag](https://docs.bugsnag.com/platforms/browsers/vue/) förser officiella integrationer som utnyttjar detta alternativet.
 
 ### warnHandler
 
