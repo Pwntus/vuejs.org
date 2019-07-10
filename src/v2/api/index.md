@@ -3,7 +3,7 @@ title: API
 type: api
 ---
 
-## Global Konfiguration
+## Global konfiguration
 
 `Vue.config` är ett objekt som innehåller Vue's globala konfigurationer. Du kan modifiera dess egenskaper som är listade nedan före du startar din applikation.
 
