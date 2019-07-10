@@ -261,25 +261,25 @@ type: api
 
   Lägger till en egenskap på ett reaktivt objekt och säkerställer att den nya egenskapen också är reaktiv, vilket utlöser uppdatering av view. Detta måste användas för att lägga till nya egenskaper på reaktiva objekt eftersom Vue inte kan detektera normala egenskapstillägg (t.ex. `this.myObject.newProperty = 'hi'`).
 
-  <p class="tip">Målobjektet kan inte vara en Vue-instans eller det översta dataobjektet av en Vue-instans.</p>
+  <p class="tip">Målobjektet kan inte vara en Vue-instans eller det översta dataobjektet i en Vue-instans.</p>
 
 - **Läs även:** [Fördjupning i reaktivitet](../guide/reactivity.html)
 
 ### Vue.delete( target, propertyName/index )
 
-- **Arguments:**
+- **Argument:**
   - `{Object | Array} target`
   - `{string | number} propertyName/index`
 
-  > Only in 2.2.0+: Also works with Array + index.
+  > Endast i 2.2.0+: Fungerar även med Array + index.
 
-- **Usage:**
+- **Användning:**
 
-  Delete a property on an object. If the object is reactive, ensure the deletion triggers view updates. This is primarily used to get around the limitation that Vue cannot detect property deletions, but you should rarely need to use it.
+  Radera en egenskap på ett objekt. Säkerställer att raderingen utlöser uppdatering av view om objektet är reaktivt. Detta används primärt för att kringgå begränsningen Vue har med att detektera egenskapsraderingar, men detta lär sällan behövas.
 
-  <p class="tip">The target object cannot be a Vue instance, or the root data object of a Vue instance.</p>
+  <p class="tip">Målobjektet kan inte vara en Vue-instans eller det översta dataobjektet i en Vue-instans.</p>
 
-- **See also:** [Reactivity in Depth](../guide/reactivity.html)
+- **Läs även:** [Fördjupning i reaktivitet](../guide/reactivity.html)
 
 ### Vue.directive( id, [definition] )
 
