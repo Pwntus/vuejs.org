@@ -164,7 +164,7 @@ type: api
 
 - **Användning**:
 
-  Sätt detta till `true` för att möjliggöra komponentinitiering, kompilering, rendering och spårninglappning för prestanda i prestanda/tidslinje -panelen i webbläsarens utvecklingsverktyg. Fungerar endast i utvecklingsläge och i webbläsare som stöder [performance.mark](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) API:et.
+  Sätt detta till `true` för att möjliggöra komponentinitiering, kompilering, rendering och spårningslappning för prestanda i prestanda/tidslinje -panelen i webbläsarens utvecklingsverktyg. Fungerar endast i utvecklingsläge och i webbläsare som stöder [performance.mark](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) API:et.
 
 ### productionTip
 
