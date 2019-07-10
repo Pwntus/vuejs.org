@@ -45,7 +45,7 @@ type: api
 
   Sammanfogningsstrategien erhåller värdet av alternativet som är definierat på föräldra och barninstansen som det första och andra argumentet. Kontextinstansen av Vue skickas som det tredje argumentet.
 
-- **Läs även:** [Anpassade Sammanfogningsstrategier För Alternativ](../guide/mixins.html#Custom-Option-Merge-Strategies)
+- **Läs även:** [Anpassade sammanfogningsstrategier för alternativ](../guide/mixins.html#Custom-Option-Merge-Strategies)
 
 ### devtools
 
