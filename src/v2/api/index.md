@@ -705,29 +705,29 @@ type: api
 
 - **Läs även:** [Instansmetoder / Data - vm.$watch](#vm-watch)
 
-## Options / DOM
+## Alternativ / DOM
 
 ### el
 
-- **Type:** `string | Element`
+- **Typ:** `string | Element`
 
-- **Restriction:** only respected in instance creation via `new`.
+- **Restriktion:** respekteras endast då en instans skapas med `new`.
 
-- **Details:**
+- **Detaljer:**
 
-  Provide the Vue instance an existing DOM element to mount on. It can be a CSS selector string or an actual HTMLElement.
+  Förse Vue-instansen ett existerande element att montera sig på. Detta kan vara en CSS-selektor textsträng eller ett HTMLElement.
 
-  After the instance is mounted, the resolved element will be accessible as `vm.$el`.
+  Efter att instansen har monterats kan det valda elementet nås med `vm.$el`.
 
-  If this option is available at instantiation, the instance will immediately enter compilation; otherwise, the user will have to explicitly call `vm.$mount()` to manually start the compilation.
+  Om detta alternativet existerar vid instansiering kommer instansen att genast starta kompilering; annars måste användaren anropa `vm.$mount()` för att manuellt starta kompileringen.
 
-  <p class="tip">The provided element merely serves as a mounting point. Unlike in Vue 1.x, the mounted element will be replaced with Vue-generated DOM in all cases. It is therefore not recommended to mount the root instance to `<html>` or `<body>`.</p>
+  <p class="tip">Det försedda elementet fungerar endast som en monteringpunkt. Till skillnad från Vue 1.x kommer elementet att ersättas med Vue-genererad DOM i alla tillfällen. Det rekommenderas därför ej att montera toppinstansen på `<html>` eller `<body>`.</p>
 
-  <p class="tip">If neither `render` function nor `template` option is present, the in-DOM HTML of the mounting DOM element will be extracted as the template. In this case, Runtime + Compiler build of Vue should be used.</p>
+  <p class="tip">Om varken en `render`-funktion eller ett `template`-alternativ existerar kommer HTML i DOM av monteringselementet att exraheras som template (mall). I dessa tillfällen borde runtime + kompilator-utgåvan av Vue användas.</p>
 
-- **See also:**
-  - [Lifecycle Diagram](../guide/instance.html#Lifecycle-Diagram)
-  - [Runtime + Compiler vs. Runtime-only](../guide/installation.html#Runtime-Compiler-vs-Runtime-only)
+- **Läs även:**
+  - [Lifecycle-diagram](../guide/instance.html#Lifecycle-Diagram)
+  - [Runtime + kompilator vs. endast runtime](../guide/installation.html#Runtime-Compiler-vs-Runtime-only)
 
 ### template
 
