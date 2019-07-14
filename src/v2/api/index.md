@@ -459,7 +459,7 @@ type: api
 
 - **Typ:** `Object | Function`
 
-- **Restriktion:** Accepterar endast `Function` när den används i en komponentdefinition.
+- **Restriktion:** accepterar endast `Function` när den används i en komponentdefinition.
 
 - **Detaljer:**
 
@@ -550,15 +550,15 @@ type: api
 
 ### propsData
 
-- **Type:** `{ [key: string]: any }`
+- **Typ:** `{ [key: string]: any }`
 
-- **Restriction:** only respected in instance creation via `new`.
+- **Restriktion:** respekteras endast då en instans skapas med `new`.
 
-- **Details:**
+- **Detaljer:**
 
-  Pass props to an instance during its creation. This is primarily intended to make unit testing easier.
+  Skicka props till en instans då den skapas. Detta är främst avsett för att göra enhetstestning enklare.
 
-- **Example:**
+- **Exempel:**
 
   ``` js
   var Comp = Vue.extend({
