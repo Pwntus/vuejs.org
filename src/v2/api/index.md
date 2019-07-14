@@ -649,13 +649,13 @@ type: api
 
 ### watch
 
-- **Type:** `{ [key: string]: string | Function | Object | Array}`
+- **Typ:** `{ [key: string]: string | Function | Object | Array}`
 
-- **Details:**
+- **Detaljer:**
 
-  An object where keys are expressions to watch and values are the corresponding callbacks. The value can also be a string of a method name, or an Object that contains additional options. The Vue instance will call `$watch()` for each entry in the object at instantiation.
+  Ett objekt där nycklar är uttryck som skall bevakas och värden är motsvarande callbacks. Värdena kan även vara en textsträng till ett metodnamn eller ett objekt som innehåller ytterligare alternativ. Vue-instansen anropar `$watch()` för varje element i objektet vid instansiering.
 
-- **Example:**
+- **Exempel:**
 
   ``` js
   var vm = new Vue({
@@ -674,14 +674,14 @@ type: api
       a: function (val, oldVal) {
         console.log('new: %s, old: %s', val, oldVal)
       },
-      // string method name
+      // metodnamn som en textsträng
       b: 'someMethod',
-      // the callback will be called whenever any of the watched object properties change regardless of their nested depth
+      // callback anropas varje gång någon av de bevakade objektegenskaperna ändras, oavsett deras kapslade djup
       c: {
         handler: function (val, oldVal) { /* ... */ },
         deep: true
       },
-      // the callback will be called immediately after the start of the observation
+      // callback anropas genast då bevakningen startar
       d: {
         handler: 'someMethod',
         immediate: true
@@ -694,16 +694,16 @@ type: api
           /* ... */
         }
       ],
-      // watch vm.e.f's value: {g: 5}
+      // bevaka vm.e.f's värde: {g: 5}
       'e.f': function (val, oldVal) { /* ... */ }
     }
   })
-  vm.a = 2 // => new: 2, old: 1
+  vm.a = 2 // => ny: 2, gammal: 1
   ```
 
-  <p class="tip">Note that __you should not use an arrow function to define a watcher__ (e.g. `searchQuery: newValue => this.updateAutocomplete(newValue)`). The reason is arrow functions bind the parent context, so `this` will not be the Vue instance as you expect and `this.updateAutocomplete` will be undefined.</p>
+  <p class="tip">Notera att __du ej bör använda en pilfunktion då du definierar en watcher__ (t.ex. `searchQuery: newValue => this.updateAutocomplete(newValue)`). Orsaken är att pilfunktioner binder föräldrakontexten, så `this` kommer inte vara Vue-instansen och `this.updateAutocomplete` kommer vara odefinierat.</p>
 
-- **See also:** [Instance Methods / Data - vm.$watch](#vm-watch)
+- **Läs även:** [Instansmetoder / Data - vm.$watch](#vm-watch)
 
 ## Options / DOM
 
