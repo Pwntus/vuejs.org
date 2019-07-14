@@ -622,15 +622,15 @@ type: api
 
 ### methods
 
-- **Type:** `{ [key: string]: Function }`
+- **Typ:** `{ [key: string]: Function }`
 
-- **Details:**
+- **Detaljer:**
 
-  Methods to be mixed into the Vue instance. You can access these methods directly on the VM instance, or use them in directive expressions. All methods will have their `this` context automatically bound to the Vue instance.
+  Metoder som kommer bli inkluderade i Vue-instansen. Du kan nå dessa metoder direkt på VM-instansen, eller använda dem i direktivuttryck. Alla metoder kommer automatiskt att ha sin `this`-kontext bundna till Vue-instansen.
 
-  <p class="tip">Note that __you should not use an arrow function to define a method__ (e.g. `plus: () => this.a++`). The reason is arrow functions bind the parent context, so `this` will not be the Vue instance as you expect and `this.a` will be undefined.</p>
+  <p class="tip">Notera att __du ej bör använda en pilfunktion då du definierar en metod__ (t.ex. `plus: () => this.a++`). Orsaken är att pilfunktioner binder föräldrakontexten, så `this` kommer inte vara Vue-instansen och `this.a` kommer vara odefinierat.</p>
 
-- **Example:**
+- **Exempel:**
 
   ```js
   var vm = new Vue({
@@ -645,7 +645,7 @@ type: api
   vm.a // 2
   ```
 
-- **See also:** [Event Handling](../guide/events.html)
+- **Läs även:** [Händelsehantering](../guide/events.html)
 
 ### watch
 
