@@ -505,35 +505,35 @@ type: api
 
 ### props
 
-- **Type:** `Array<string> | Object`
+- **Typ:** `Array<string> | Object`
 
-- **Details:**
+- **Detaljer:**
 
-  A list/hash of attributes that are exposed to accept data from the parent component. It has an Array-based simple syntax and an alternative Object-based syntax that allows advanced configurations such as type checking, custom validation and default values.
+  En lista/hashtabell av attribut som exponeras för att acceptera data från föräldrakomponenten. Den har en enkel array-baserad syntax och en alternativ objekt-baserad syntax som möjliggör avancerad konfiguration så som typkontroll, anpassade valideringar och standardvärden.
 
-  With Object-based syntax, you can use following options:
-    - `type`: can be one of the following native constructors: `String`, `Number`, `Boolean`, `Array`, `Object`, `Date`, `Function`, `Symbol`, any custom constructor function or an array of those. Will check if a prop has a given type, and will throw a warning if it doesn't. [More information](../guide/components-props.html#Prop-Types) on prop types.
+  Med den objekt-baserade syntaxen kan du använda följande alternativ:
+    - `type`: kan vara en av följande nativkonstruktörer: `String`, `Number`, `Boolean`, `Array`, `Object`, `Date`, `Function`, `Symbol`, anpassad konstruktörfunktion eller en array av dem. Kommer kontrollera om en prop har den givna typen och kastar annars en varning om den ej har det. [Mer information](../guide/components-props.html#Prop-Types) om prop-typer.
     - `default`: `any`
-    Specifies a default value for the prop. If the prop is not passed, this value will be used instead. Object or array defaults must be returned from a factory function.
+    Definierar ett standardvärde för prop. Om denna prop inte har skickats kommer detta värdet att användas instället. Standardvärden som är objekt eller array måste returneras från en fabriksfunktion.
     - `required`: `Boolean`
-    Defines if the prop is required. In a non-production environment, a console warning will be thrown if this value is truthy and the prop is not passed.
+    Definierar ifrall prop är obligatorisk. I ett icke-produktionsläge kommer en konsollvarning kastas om detta värdet är sant och prop:en inte har skickats.
     - `validator`: `Function`
-    Custom validator function that takes the prop value as the sole argument. In a non-production environment, a console warning will be thrown if this function returns a falsy value (i.e. the validation fails). You can read more about prop validation [here](../guide/components-props.html#Prop-Validation).
+    Anpassad valideringsfuktion som tar prop-värdet som enda argument. I ett icke-produktionsläge kommer en konsollvarning kastas om denna funktion returnerar ett falskt värde (t.ex. ifall valideringen misslyckats). Du kan läsa mera om propvalidering [här](../guide/components-props.html#Prop-Validation).
 
-- **Example:**
+- **Exempel:**
 
   ``` js
-  // simple syntax
+  // simpel syntax
   Vue.component('props-demo-simple', {
     props: ['size', 'myMessage']
   })
 
-  // object syntax with validation
+  // objektsyntax med objektvalidering
   Vue.component('props-demo-advanced', {
     props: {
-      // type check
+      // typkontroll
       height: Number,
-      // type check plus other validations
+      // typkontroll och flera valideringar
       age: {
         type: Number,
         default: 0,
@@ -546,7 +546,7 @@ type: api
   })
   ```
 
-- **See also:** [Props](../guide/components-props.html)
+- **Läs även:** [Props](../guide/components-props.html)
 
 ### propsData
 
