@@ -763,17 +763,17 @@ type: api
 
 ### renderError
 
-> New in 2.2.0+
+> Nytt i 2.2.0+
 
-  - **Type:** `(createElement: () => VNode, error: Error) => VNode`
+  - **Typ:** `(createElement: () => VNode, error: Error) => VNode`
 
-  - **Details:**
+  - **Detaljer:**
 
-    **Only works in development mode.**
+    **Fungerar endast i utvecklingsläge.**
 
-    Provide an alternative render output when the default `render` function encounters an error. The error will be passed to `renderError` as the second argument. This is particularly useful when used together with hot-reload.
+    En alternativ render-output då den ursprungliga `render`-funktionen stöter på ett fel. Felet skickas till `renderError` i det andra argumentet. Detta är särskilt användbart då det används tillsammans med hot-reload.
 
-  - **Example:**
+  - **Exempel:**
 
     ``` js
     new Vue({
@@ -786,7 +786,7 @@ type: api
     }).$mount('#app')
     ```
 
-  - **See also:** [Render Functions](../guide/render-function.html)
+  - **Läs även:** [Renderfunktioner](../guide/render-function.html)
 
 ## Options / Lifecycle Hooks
 
