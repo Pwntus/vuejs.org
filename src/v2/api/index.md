@@ -749,17 +749,17 @@ type: api
 
 ### render
 
-  - **Type:** `(createElement: () => VNode) => VNode`
+  - **Typ:** `(createElement: () => VNode) => VNode`
 
-  - **Details:**
+  - **Detaljer:**
 
-    An alternative to string templates allowing you to leverage the full programmatic power of JavaScript. The render function receives a `createElement` method as it's first argument used to create `VNode`s.
+    Ett alternativ för textsträng-templates som låter dig utnyttja JavaScripts fullständiga programmatiska kraft. Renderfunktionen mottar som sitt första argument en `createElement`-metod som användas för att skapa `VNode`s.
 
-    If the component is a functional component, the render function also receives an extra argument `context`, which provides access to contextual data since functional components are instance-less.
+    Om komponenten är en funktionell komponent mottar renderfunktionen ett extra argument, `context`, som förser tillgång till kontextuell data. Detta eftersom funktionella komponenter är instanslösa.
 
-    <p class="tip">The `render` function has priority over the render function compiled from `template` option or in-DOM HTML template of the mounting element which is specified by the `el` option.</p>
+    <p class="tip">`render`-funktionen har prioritet före renderfunktioner som kompilerats från `template`-alternativ eller HTML i DOM templates på det monterade elementet, vilka har blivit specifierade i `el`-alternativet.</p>
 
-  - **See also:** [Render Functions](../guide/render-function.html)
+  - **Läs även:** [Renderfunktioner](../guide/render-function.html)
 
 ### renderError
 
