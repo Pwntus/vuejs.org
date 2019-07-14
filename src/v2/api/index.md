@@ -453,41 +453,41 @@ type: api
   }
   ```
 
-## Options / Data
+## Alternativ / Data
 
 ### data
 
-- **Type:** `Object | Function`
+- **Typ:** `Object | Function`
 
-- **Restriction:** Only accepts `Function` when used in a component definition.
+- **Restriktion:** Accepterar endast `Function` när den används i en komponentdefinition.
 
-- **Details:**
+- **Detaljer:**
 
-  The data object for the Vue instance. Vue will recursively convert its properties into getter/setters to make it "reactive". **The object must be plain**: native objects such as browser API objects and prototype properties are ignored. A rule of thumb is that data should just be data - it is not recommended to observe objects with their own stateful behavior.
+  Dataobjektet för Vue-instansen. Vue kommer rekursivt konvertera sina egenskaper till getters/setters för att göra dem "reaktiva". **Detta måste vara ett enkelt objekt**: innebyggda objekt så som objekt från webbläsar-API:er blir ignorerade. Värt att minnas är att data borde edast vara data - det rekommenderas ej att observera objekt med egna tillståndsbeteenden.
 
-  Once observed, you can no longer add reactive properties to the root data object. It is therefore recommended to declare all root-level reactive properties upfront, before creating the instance.
+  Du kan inte längre lägga till reaktiva objekt på dataobjektets toppnivå när det väl är observerat. Det rekommenderas därför att genast deklarera alla reaktiva egenskaper på toppnivå innan instansen skapas.
 
-  After the instance is created, the original data object can be accessed as `vm.$data`. The Vue instance also proxies all the properties found on the data object, so `vm.a` will be equivalent to `vm.$data.a`.
+  När instansen väl har skapats kan det ursprungliga dataobjektet nås genom `vm.$data`. Vue-instansen vidarebefordrar också alla egenskaper i dataobjektet, så `vm.a` motsvarar `vm.$data.a`.
 
-  Properties that start with `_` or `$` will **not** be proxied on the Vue instance because they may conflict with Vue's internal properties and API methods. You will have to access them as `vm.$data._property`.
+  Egenskaper som startar på `_` eller `$` kommer **inte** vidarebefordras på Vue-instansen eftersom de kan strida mot de interna egenskaperna och API-metoderna i Vue. Du måste då nå dem genom `vm.$data._property`.
 
-  When defining a **component**, `data` must be declared as a function that returns the initial data object, because there will be many instances created using the same definition. If we use a plain object for `data`, that same object will be **shared by reference** across all instances created! By providing a `data` function, every time a new instance is created we can call it to return a fresh copy of the initial data.
+  När en **komponent** definieras måste `data` deklareras som en funktion som returnerar det ursprungliga dataobjektet eftersom det kommer vara flera instanser som använder samma definition. Om vi använder ett enkelt objekt för `data` kommer det samma objektet att **delas genom referens** på tvärs av alla instanser som skapas! Genom att göra `data` till en funktion kan vi anropa denna funktion varje gång en ny instans skapas och på så vis få en helt ny kopia av ursprungsdata.
 
-  If required, a deep clone of the original object can be obtained by passing `vm.$data` through `JSON.parse(JSON.stringify(...))`.
+  Om det behövs kan man få en djup-klon av ursprungsobjektet genom att sända `vm.$data` genom `JSON.parse(JSON.stringify(...))`.
 
-- **Example:**
+- **Exempel:**
 
   ``` js
   var data = { a: 1 }
 
-  // direct instance creation
+  // skapa en instans direkt
   var vm = new Vue({
     data: data
   })
   vm.a // => 1
   vm.$data === data // => true
 
-  // must use function when in Vue.extend()
+  // måste använda en funktion i Vue.extend()
   var Component = Vue.extend({
     data: function () {
       return { a: 1 }
@@ -495,13 +495,13 @@ type: api
   })
   ```
 
-  Note that if you use an arrow function with the `data` property, `this` won't be the component's instance, but you can still access the instance as the function's first argument:
+  Notera att om du använder en pilfunktion i `data`-egenskapen kommer `this` inte vara komponentinstansen, men du kan fortfarande nå instansen genom det första argumentet:
 
   ```js
   data: vm => ({ a: vm.myProp })
   ```
 
-- **See also:** [Reactivity in Depth](../guide/reactivity.html)
+- **Läs även:** [Fördjupning i reaktivitet](../guide/reactivity.html)
 
 ### props
 
