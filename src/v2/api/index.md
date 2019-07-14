@@ -715,7 +715,7 @@ type: api
 
 - **Detaljer:**
 
-  Förse Vue-instansen ett existerande element att montera sig på. Detta kan vara en CSS-selektor textsträng eller ett HTMLElement.
+  Förse Vue-instansen med ett existerande element att montera sig på. Detta kan vara en CSS selektor-textsträng eller ett HTMLElement.
 
   Efter att instansen har monterats kan det valda elementet nås med `vm.$el`.
 
@@ -731,21 +731,21 @@ type: api
 
 ### template
 
-- **Type:** `string`
+- **Typ:** `string`
 
-- **Details:**
+- **Detaljer:**
 
-  A string template to be used as the markup for the Vue instance. The template will **replace** the mounted element. Any existing markup inside the mounted element will be ignored, unless content distribution slots are present in the template.
+  En template (mall) i textsträngformat att användas som markup för Vue-instansen. Denna template kommer **ersätta** det monterade elementet. All existerande markup i det monterade elementet kommer bli ignorerat, såvida inte innehållsdistribuerande slots existerar i template.
 
-  If the string starts with `#` it will be used as a querySelector and use the selected element's innerHTML as the template string. This allows the use of the common `<script type="x-template">` trick to include templates.
+  Om textsträngen startar med `#` kommer den användas som en querySelector och använda det valda elementets innerHTML för template. Detta möjliggör användandet av det vanliga `<script type="x-template">`-tricket för att inkludera templates.
 
-  <p class="tip">From a security perspective, you should only use Vue templates that you can trust. Never use user-generated content as your template.</p>
+  <p class="tip">Från ett säkerhetsperspektiv borde du endast använda Vue-templates som du litar på. Lita aldrig på templates som genererats av användare.</p>
 
-  <p class="tip">If render function is present in the Vue option, the template will be ignored.</p>
+  <p class="tip">Om en renderingsfunktion existerar i Vue-alternativen kommer template att ignoreras.</p>
 
-- **See also:**
-  - [Lifecycle Diagram](../guide/instance.html#Lifecycle-Diagram)
-  - [Content Distribution with Slots](../guide/components.html#Content-Distribution-with-Slots)
+- **Läs även:**
+  - [Lifecycle-diagram](../guide/instance.html#Lifecycle-Diagram)
+  - [Innehållsdistribution med slots](../guide/components.html#Content-Distribution-with-Slots)
 
 ### render
 
