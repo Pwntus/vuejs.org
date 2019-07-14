@@ -495,7 +495,7 @@ type: api
   })
   ```
 
-  Notera att om du använder en pilfunktion i `data`-egenskapen kommer `this` inte vara komponentinstansen, men du kan fortfarande nå instansen genom det första argumentet:
+  Notera att om du använder en pilfunktion i `data`-egenskapen kommer `this` inte vara komponentinstansen, men du kan fortfarande nå instansen genom funktionens första argument:
 
   ```js
   data: vm => ({ a: vm.myProp })
@@ -575,13 +575,13 @@ type: api
 
 ### computed
 
-- **Type:** `{ [key: string]: Function | { get: Function, set: Function } }`
+- **Typ:** `{ [key: string]: Function | { get: Function, set: Function } }`
 
-- **Details:**
+- **Detaljer:**
 
-  Computed properties to be mixed into the Vue instance. All getters and setters have their `this` context automatically bound to the Vue instance.
+  Computed properties (beräknade egenskaper) som kommer bli inkluderade i Vue-instansen. Alla getters och setters har sin `this`-kontext automatiskt bundna till Vue-instansen.
 
-  Note that if you use an arrow function with a computed property, `this` won't be the component's instance, but you can still access the instance as the function's first argument:
+  Notera att ifall du använder en pilfunktion i en computed property kommer `this` inte vara komponentinstansen, men du kan fortfarande nå instansen genom funktionens första argument:
 
   ```js
   computed: {
@@ -589,19 +589,19 @@ type: api
   }
   ```
 
-  Computed properties are cached, and only re-computed on reactive dependency changes. Note that if a certain dependency is out of the instance's scope (i.e. not reactive), the computed property will __not__ be updated.
+  Computed properties är cachade och återberäknas endast vid reaktiva beroendeförändringar. Notera att ifall ett specifikt beroende är utanför instansräckvidden (t.ex. inte reaktiv) kommer computed property:en __inte__ bli uppdaterad.
 
-- **Example:**
+- **Exempel:**
 
   ```js
   var vm = new Vue({
     data: { a: 1 },
     computed: {
-      // get only
+      // endast get
       aDouble: function () {
         return this.a * 2
       },
-      // both get and set
+      // både get och set
       aPlus: {
         get: function () {
           return this.a + 1
@@ -618,7 +618,7 @@ type: api
   vm.aDouble // => 4
   ```
 
-- **See also:** [Computed Properties](../guide/computed.html)
+- **Läs även:** [Computed Properties](../guide/computed.html)
 
 ### methods
 
