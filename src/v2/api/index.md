@@ -5,7 +5,7 @@ type: api
 
 ## Global konfiguration
 
-`Vue.config` är ett objekt som innehåller Vue's globala konfigurationer. Du kan modifiera dess egenskaper (properties) som är listade nedan före du startar din applikation.
+`Vue.config` är ett objekt som innehåller Vue's globala konfigurationer. Du kan modifiera dess egenskaper (properties) (TRANSLATE!) som är listade nedan före du startar din applikation.
 
 ### silent
 
@@ -41,7 +41,7 @@ type: api
   // Profile.options._my_option = 2
   ```
 
-  Definiera anpassade sammanfogningsstrategier för alternativ (options).
+  Definiera anpassade sammanfogningsstrategier (TRANSLATE?) för alternativ (options) (TRANSLATE!).
 
   Sammanfogningsstrategien erhåller värdet av alternativet som är definierat på föräldra och barninstansen som det första och andra argumentet. Kontextinstansen av Vue skickas som det tredje argumentet.
 
@@ -51,7 +51,7 @@ type: api
 
 - **Typ:** `boolean`
 
-- **Standardvärde:** `true` (`false` i produktionsläge)
+- **Standardvärde:** `true` (`false` i produktionsläge (TRANSLATE?))
 
 - **Användning:**
 
@@ -62,7 +62,7 @@ type: api
 
   Konfigurera huruvida inspektion av [vue-devtools](https://github.com/vuejs/vue-devtools) tillåts.
   
-  Standardvärdet av detta alternativet är `true` i utvecklingsläge och `false` i produktionsläge. Du kan sätta det till `true` för att tillåta inspektion i produktionsläge.
+  Standardvärdet av detta alternativet är `true` i utvecklingsläge (TRANSLATE?) och `false` i produktionsläge (TRANSLATE?). Du kan sätta det till `true` för att tillåta inspektion i produktionsläge (TRANSLATE?).
 
 ### errorHandler
 
@@ -80,13 +80,13 @@ type: api
   }
   ```
 
-  Tilldela en hanterare för ofångade fel som uppstått under komponentrendering och watchers (bevakare). Hanteraren anropas med felet och Vue-instansen.
+  Tilldela en hanterare för ofångade fel som uppstått under komponentrendering och watchers (bevakare) (TRANSLATE!). Hanteraren anropas med felet och Vue-instansen.
 
-  > I 2.2.0+ kommer denna hook (krok) även fånga fel i lifecycle hooks (livscykelkrokar) i komponenter. När denna hook är `undefined` kommer fångade fel bli loggade med `console.error` istället för att krascha applikationen.
+  > I 2.2.0+ kommer denna hook (krok) (TRANSLATE!) även fånga fel i lifecycle hooks (livscykelkrokar) (TRANSLATE!) i komponenter. När denna hook (TRANSLATE!) är `undefined` kommer fångade fel bli loggade med `console.error` istället för att krascha applikationen.
 
-  > I 2.4.0+ kommer denna hook även fånga fel som uppstår i anpassade Vue händelsehanterare.
+  > I 2.4.0+ kommer denna hook (TRANSLATE!) även fånga fel som uppstår i anpassade Vue händelsehanterare.
 
-  > I 2.6.0+ kommer denna hook även fånga fel som uppstår i `v-on` DOM lyssnare. Om någon av de gällande hookarna eller hanterarna returnerar en Promise-kedja, kommer felet från kedjan även bli hanterat.
+  > I 2.6.0+ kommer denna hook (TRANSLATE!) även fånga fel som uppstår i `v-on` DOM lyssnare. Om någon av de gällande hookarna (TRANSLATE!) eller hanterarna returnerar en Promise-kedja, kommer felet från kedjan även bli hanterat.
 
   > Felsökningstjänsterna [Sentry](https://sentry.io/for/vue/) och [Bugsnag](https://docs.bugsnag.com/platforms/browsers/vue/) förser officiella integrationer som utnyttjar detta alternativet.
 
@@ -106,7 +106,7 @@ type: api
   }
   ```
 
-  Tilldela en anpassad hanterare för varningar under Vue körningen. Notera att detta endast fungerar i utvecklingsläge och ignoreras i produktionsläge.
+  Tilldela en anpassad hanterare för varningar under Vue körningen. Notera att detta endast fungerar i utvecklingsläge (TRANSLATE?) och ignoreras i produktionsläge (TRANSLATE?).
 
 ### ignoredElements
 
@@ -126,7 +126,7 @@ type: api
   ]
   ```
 
-  Tvinga Vue att ignorera anpassade element som är definierate utanför Vue (t.ex. då man använder Web Components API:et). Varningar om `Unknown custom element` kommer annars att kastas, förutsatt att du glömt att registrera en global komponent eller felstavat ett komponentnamn.
+  Tvinga Vue att ignorera anpassade element som är definierade utanför Vue (t.ex. då man använder Web Components API:et). Varningar om `Unknown custom element` kommer annars att kastas, förutsatt att du glömt att registrera en global komponent eller felstavat ett komponentnamn.
 
 ### keyCodes
 
@@ -164,7 +164,7 @@ type: api
 
 - **Användning**:
 
-  Sätt detta till `true` för att möjliggöra komponentinitiering, kompilering, rendering och spårningslappning för prestanda i prestanda/tidslinje -panelen i webbläsarens utvecklingsverktyg. Fungerar endast i utvecklingsläge och i webbläsare som stöder [performance.mark](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) API:et.
+  Sätt detta till `true` för att möjliggöra komponentinitiering, kompilering, rendering och spårningslappning (TRANSLATE?) för prestanda i prestanda/tidslinje-panelen i webbläsarens utvecklingsverktyg. Fungerar endast i utvecklingsläge (TRANSLATE!) och i webbläsare som stöder [performance.mark](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) API:et.
 
 ### productionTip
 
@@ -187,7 +187,7 @@ type: api
 
 - **Användning:**
 
-  Skapa en "subklass" från Vue baskonstruktor. Argumentet bör vara ett objekt som inehåller komponentalternativ.
+  Skapa en "subklass" från Vues baskonstruktor. Argumentet bör vara ett objekt som inehåller komponentalternativ.
 
   Ett specialfall att notera här är `data` alternativet - det måste vara en funktion då det används med `Vue.extend()`.
 
@@ -227,7 +227,7 @@ type: api
 
 - **Användning:**
 
-  Uppskjut exekvering av callbackfunktionen fram tills nästa uppdateringscykel av DOM. Använd detta genast efter att du uppdaterat data för att vänta på DOM-uppdateringen.
+  Uppskjut exekvering av callbackfunktionen (TRANSLATE!) fram tills nästa uppdateringscykel av DOM. Använd detta genast efter att du uppdaterat data för att vänta på DOM-uppdateringen.
 
   ``` js
   // modifiera data
@@ -244,7 +244,7 @@ type: api
     })
   ```
 
-  > Nytt i 2.1.0+: returnerar en Promise ifall ingen callbackfunktion är given och Promise stöds i exekveringsmiljön. Vänligen notera att det inte följer en Promise polyfill med Vue, så ifall du utvecklar mot webbläsare som inte stöder Promise (ser på dig, IE) måste du förse en polyfill själv.
+  > Nytt i 2.1.0+: returnerar en Promise ifall ingen callbackfunktion (TRANSLATE!) är given och Promise stöds i exekveringsmiljön. Vänligen notera att det inte följer en Promise polyfill (TRANSLATE!) med Vue, så ifall du utvecklar mot webbläsare som inte stöder Promise (ser på dig, IE) måste du förse en polyfill (TRANSLATE!) själv.
 
 - **Läs även:** [Asynkron uppdateringskö](../guide/reactivity.html#Async-Update-Queue)
 
@@ -259,7 +259,7 @@ type: api
 
 - **Avändning:**
 
-  Lägger till en egenskap på ett reaktivt objekt och säkerställer att den nya egenskapen också är reaktiv, vilket utlöser uppdatering av view. Detta måste användas för att lägga till nya egenskaper på reaktiva objekt eftersom Vue inte kan detektera normala egenskapstillägg (t.ex. `this.myObject.newProperty = 'hi'`).
+  Lägger till en egenskap på ett reaktivt objekt och säkerställer att den nya egenskapen också är reaktiv, vilket utlöser uppdatering av view (TRANSLATE!). Detta måste användas för att lägga till nya egenskaper på reaktiva objekt eftersom Vue inte kan detektera normala egenskapstillägg (t.ex. `this.myObject.newProperty = 'hi'`).
 
   <p class="tip">Målobjektet kan inte vara en Vue-instans eller det översta dataobjektet i en Vue-instans.</p>
 
@@ -271,11 +271,11 @@ type: api
   - `{Object | Array} target`
   - `{string | number} propertyName/index`
 
-  > Endast i 2.2.0+: Fungerar även med Array + index.
+  > Endast i 2.2.0+: Fungerar även med Array + index (TRANSLATE!).
 
 - **Användning:**
 
-  Radera en egenskap på ett objekt. Säkerställer att raderingen utlöser uppdatering av view om objektet är reaktivt. Detta används primärt för att kringgå begränsningen Vue har med att detektera egenskapsraderingar, men detta lär sällan behövas.
+  Radera en egenskap på ett objekt. Säkerställer att raderingen utlöser uppdatering av view (TRANSLATE!) om objektet är reaktivt. Detta används primärt för att kringgå begränsningen Vue har med att detektera egenskapsraderingar, men detta lär sällan behövas.
 
   <p class="tip">Målobjektet kan inte vara en Vue-instans eller det översta dataobjektet i en Vue-instans.</p>
 
@@ -364,11 +364,11 @@ type: api
 
 - **Användning:**
 
-  Installera en Vue.js plugin (insticksprogram). Om plugin är ett objekt måste den exponera en `install` metod. Om den i själva verket är en funktion kommer den bli behandlad som install-metoden. Install-metoden anropas med Vue som argument.
+  Installera en Vue.js plugin (insticksprogram) (TRANSLATE?). Om plugin är ett objekt måste den exponera en `install` metod. Om den i själva verket är en funktion kommer den bli behandlad som install-metoden. Install-metoden anropas med Vue som argument.
 
   Denna metod måste anropas före man använder `new Vue()`.
 
-  När denna metod anropas på samma plugin flera gånger installeras den bara en gång.
+  När denna metod anropas på samma plugin (TRANSLATE!) flera gånger installeras den bara en gång.
 
 - **Läs även:** [Plugins](../guide/plugins.html)
 
@@ -379,7 +379,7 @@ type: api
 
 - **Användning:**
 
-  Tillämpa en global mixin vilket påverkar varje Vue-instans som skapas hädanefter. Detta kan utnyttjas av pluginutvecklare för att injicera anpassad funktionalitet i komponenter. **Rekommenderas ej i applikationskod**.
+  Tillämpa en global mixin vilket påverkar varje Vue-instans som skapas hädanefter. Detta kan utnyttjas av pluginutvecklare (TRANSLATE!) för att injicera anpassad funktionalitet i komponenter. **Rekommenderas ej i applikationskod**.
 
 - **Läs även:** [Global mixin](../guide/mixins.html#Global-Mixin)
 
@@ -390,7 +390,7 @@ type: api
 
 - **Användning:**
 
-  Kompilerar en templatesträng (mallsträng) till en renderingsfunktion. **Endast tillgänglig i fullständig utgåva**.
+  Kompilerar en templatesträng (mallsträng) (TRANSLATE?) till en renderingsfunktion. **Endast tillgänglig i fullständig utgåva**.
 
   ``` js
   var res = Vue.compile('<div><span>{{ msg }}</span></div>')
@@ -417,7 +417,7 @@ type: api
 
   Gör ett objekt reaktivt. Internt använder Vue detta på objektet som returneras av `data`-funktionen.
 
-  Det returnerade objektet kan genast användas i [renderingsfunktioner](../guide/render-function.html) och [computed properties (beräknade variabler)](../guide/computed.html) och kommer utlösa ändamålsenliga uppdateringar vid förändring. Den kan även användas som en minimal lagringsplats på tvärs av komponenter för simpla scenarier:
+  Det returnerade objektet kan genast användas i [renderingsfunktioner](../guide/render-function.html) och [computed properties (beräknade variabler)](../guide/computed.html) (TRANSLATE?) och kommer utlösa ändamålsenliga uppdateringar vid förändring. Den kan även användas som en minimal lagringsplats på tvärs av komponenter för simpla scenarier:
 
   ``` js
   const state = Vue.observable({ count: 0 })
@@ -437,7 +437,7 @@ type: api
 
 ### Vue.version
 
-- **Detaljer**: Innehåller versionsnummret till Vue-installationen i textform. Detta är speciellt användbart för communityplugins och komponenter där du kanske använder olika strategier för olika versionsnummer.
+- **Detaljer**: Innehåller versionsnummret till Vue-installationen i textform. Detta är speciellt användbart för communityplugins (TRANSLATE!) och komponenter där du kanske använder olika strategier för olika versionsnummer.
 
 - **Användning**:
 
@@ -463,7 +463,7 @@ type: api
 
 - **Detaljer:**
 
-  Dataobjektet för Vue-instansen. Vue kommer rekursivt konvertera sina egenskaper till getters/setters för att göra dem "reaktiva". **Detta måste vara ett enkelt objekt**: innebyggda objekt så som objekt från webbläsar-API:er blir ignorerade. Värt att minnas är att data borde edast vara data - det rekommenderas ej att observera objekt med egna tillståndsbeteenden.
+  Dataobjektet för Vue-instansen. Vue kommer rekursivt konvertera sina egenskaper till getters/setters (TRANSLATE!) för att göra dem "reaktiva". **Detta måste vara ett enkelt objekt**: innebyggda objekt så som objekt från webbläsar-API:er blir ignorerade. Värt att minnas är att data borde endast vara data - det rekommenderas ej att observera objekt med egna tillståndsbeteenden.
 
   Du kan inte längre lägga till reaktiva objekt på dataobjektets toppnivå när det väl är observerat. Det rekommenderas därför att genast deklarera alla reaktiva egenskaper på toppnivå innan instansen skapas.
 
@@ -471,7 +471,7 @@ type: api
 
   Egenskaper som startar på `_` eller `$` kommer **inte** vidarebefordras på Vue-instansen eftersom de kan strida mot de interna egenskaperna och API-metoderna i Vue. Du måste då nå dem genom `vm.$data._property`.
 
-  När en **komponent** definieras måste `data` deklareras som en funktion som returnerar det ursprungliga dataobjektet eftersom det kommer vara flera instanser som använder samma definition. Om vi använder ett enkelt objekt för `data` kommer det samma objektet att **delas genom referens** på tvärs av alla instanser som skapas! Genom att göra `data` till en funktion kan vi anropa denna funktion varje gång en ny instans skapas och på så vis få en helt ny kopia av ursprungsdata.
+  När en **komponent** definieras måste `data` deklareras som en funktion som returnerar det ursprungliga dataobjektet, eftersom det kommer vara flera instanser som använder samma definition. Om vi använder ett enkelt objekt för `data` kommer det samma objektet att **delas genom referens** på tvärs av alla instanser som skapas! Genom att göra `data` till en funktion kan vi anropa denna funktion varje gång en ny instans skapas och på så vis få en helt ny kopia av ursprungsdata.
 
   Om det behövs kan man få en djup-klon av ursprungsobjektet genom att sända `vm.$data` genom `JSON.parse(JSON.stringify(...))`.
 
@@ -509,16 +509,16 @@ type: api
 
 - **Detaljer:**
 
-  En lista/hashtabell av attribut som exponeras för att acceptera data från föräldrakomponenten. Den har en enkel array-baserad syntax och en alternativ objekt-baserad syntax som möjliggör avancerad konfiguration så som typkontroll, anpassade valideringar och standardvärden.
+  En lista/hashtabell (TRANSLATE?) av attribut som exponeras för att acceptera data från föräldrakomponenten. Den har en enkel array-baserad (TRANSLATE!) syntax och en alternativ objekt-baserad syntax som möjliggör avancerad konfiguration så som typkontroll, anpassade valideringar och standardvärden.
 
   Med den objekt-baserade syntaxen kan du använda följande alternativ:
-    - `type`: kan vara en av följande nativkonstruktörer: `String`, `Number`, `Boolean`, `Array`, `Object`, `Date`, `Function`, `Symbol`, anpassad konstruktörfunktion eller en array av dem. Kommer kontrollera om en prop har den givna typen och kastar annars en varning om den ej har det. [Mer information](../guide/components-props.html#Prop-Types) om prop-typer.
+    - `type`: kan vara en av följande nativkonstruktörer (TRANSLATE!): `String`, `Number`, `Boolean`, `Array`, `Object`, `Date`, `Function`, `Symbol`, anpassad konstruktörfunktion eller en array (TRANSLATE!) av dem. Kommer kontrollera om en prop har den givna typen och kastar annars en varning om den ej har det. [Mer information](../guide/components-props.html#Prop-Types) om prop-typer (TRANSLATE!).
     - `default`: `any`
-    Definierar ett standardvärde för prop. Om denna prop inte har skickats kommer detta värdet att användas instället. Standardvärden som är objekt eller array måste returneras från en fabriksfunktion.
+    Definierar ett standardvärde för prop (TRANSLATE!). Om denna prop (TRANSLATE!) inte har skickats kommer detta värdet att användas instället. Standardvärden som är objekt eller array måste returneras från en fabriksfunktion.
     - `required`: `Boolean`
-    Definierar ifrall prop är obligatorisk. I ett icke-produktionsläge kommer en konsollvarning kastas om detta värdet är sant och prop:en inte har skickats.
+    Definierar ifrall prop (TRANSLATE!) är obligatorisk. I ett icke-produktionsläge kommer en konsollvarning kastas om detta värdet är sant och prop:en (TRANSLATE!) inte har skickats.
     - `validator`: `Function`
-    Anpassad valideringsfuktion som tar prop-värdet som enda argument. I ett icke-produktionsläge kommer en konsollvarning kastas om denna funktion returnerar ett falskt värde (t.ex. ifall valideringen misslyckats). Du kan läsa mera om propvalidering [här](../guide/components-props.html#Prop-Validation).
+    Anpassad valideringsfuktion som tar prop-värdet (TRANSLATE!) som enda argument. I ett icke-produktionsläge kommer en konsolvarning kastas om denna funktion returnerar ett falskt värde (t.ex. ifall valideringen misslyckats). Du kan läsa mera om propvalidering (TRANSLATE!) [här](../guide/components-props.html#Prop-Validation).
 
 - **Exempel:**
 
@@ -556,7 +556,7 @@ type: api
 
 - **Detaljer:**
 
-  Skicka props till en instans då den skapas. Detta är främst avsett för att göra enhetstestning enklare.
+  Skicka props (TRANSLATE!) till en instans då den skapas. Detta är främst avsett för att göra enhetstestning enklare.
 
 - **Exempel:**
 
@@ -579,9 +579,9 @@ type: api
 
 - **Detaljer:**
 
-  Computed properties (beräknade egenskaper) som kommer bli inkluderade i Vue-instansen. Alla getters och setters har sin `this`-kontext automatiskt bundna till Vue-instansen.
+  Computed properties (beräknade egenskaper) (TRANSLATE?) som kommer bli inkluderade i Vue-instansen. Alla getters och setters har sin `this`-kontext automatiskt bundna till Vue-instansen.
 
-  Notera att ifall du använder en pilfunktion i en computed property kommer `this` inte vara komponentinstansen, men du kan fortfarande nå instansen genom funktionens första argument:
+  Notera att ifall du använder en pilfunktion i en computed property (TRANSLATE!) kommer `this` inte vara komponentinstansen, men du kan fortfarande nå instansen genom funktionens första argument:
 
   ```js
   computed: {
@@ -589,7 +589,7 @@ type: api
   }
   ```
 
-  Computed properties är cachade och återberäknas endast vid reaktiva beroendeförändringar. Notera att ifall ett specifikt beroende är utanför instansräckvidden (t.ex. inte reaktiv) kommer computed property:en __inte__ bli uppdaterad.
+  Computed properties (TRANSLATE!) är cachade och återberäknas endast vid reaktiva beroendeförändringar. Notera att ifall ett specifikt beroende är utanför instansräckvidden (t.ex. inte reaktiv) kommer computed property:en (TRANSLATE?) __inte__ bli uppdaterad.
 
 - **Exempel:**
 
@@ -618,7 +618,7 @@ type: api
   vm.aDouble // => 4
   ```
 
-- **Läs även:** [Computed Properties](../guide/computed.html)
+- **Läs även:** [Computed Properties (TRANSLATE!)](../guide/computed.html)
 
 ### methods
 
@@ -653,7 +653,7 @@ type: api
 
 - **Detaljer:**
 
-  Ett objekt där nycklar är uttryck som skall bevakas och värden är motsvarande callbacks. Värdena kan även vara en textsträng till ett metodnamn eller ett objekt som innehåller ytterligare alternativ. Vue-instansen anropar `$watch()` för varje element i objektet vid instansiering.
+  Ett objekt där nycklar (TRANSLATE?) är uttryck som skall bevakas och värden är motsvarande callbacks (TRANSLATE!). Värdena kan även vara en textsträng till ett metodnamn eller ett objekt som innehåller ytterligare alternativ. Vue-instansen anropar `$watch()` för varje element i objektet vid instansiering.
 
 - **Exempel:**
 
@@ -676,12 +676,12 @@ type: api
       },
       // metodnamn som en textsträng
       b: 'someMethod',
-      // callback anropas varje gång någon av de bevakade objektegenskaperna ändras, oavsett deras kapslade djup
+      // callback (TRANSLATE!) anropas varje gång någon av de bevakade objektegenskaperna ändras, oavsett deras kapslade djup
       c: {
         handler: function (val, oldVal) { /* ... */ },
         deep: true
       },
-      // callback anropas genast då bevakningen startar
+      // callback (TRANSLATE!) anropas genast då bevakningen startar
       d: {
         handler: 'someMethod',
         immediate: true
@@ -701,7 +701,7 @@ type: api
   vm.a = 2 // => ny: 2, gammal: 1
   ```
 
-  <p class="tip">Notera att __du ej bör använda en pilfunktion då du definierar en watcher__ (t.ex. `searchQuery: newValue => this.updateAutocomplete(newValue)`). Orsaken är att pilfunktioner binder föräldrakontexten, så `this` kommer inte vara Vue-instansen och `this.updateAutocomplete` kommer vara odefinierat.</p>
+  <p class="tip">Notera att __du ej bör använda en pilfunktion då du definierar en watcher (TRANSLATE!)__ (t.ex. `searchQuery: newValue => this.updateAutocomplete(newValue)`). Orsaken är att pilfunktioner binder föräldrakontexten, så `this` kommer inte vara Vue-instansen och `this.updateAutocomplete` kommer vara odefinierat.</p>
 
 - **Läs även:** [Instansmetoder / Data - vm.$watch](#vm-watch)
 
@@ -723,10 +723,10 @@ type: api
 
   <p class="tip">Det försedda elementet fungerar endast som en monteringpunkt. Till skillnad från Vue 1.x kommer elementet att ersättas med Vue-genererad DOM i alla tillfällen. Det rekommenderas därför ej att montera toppinstansen på `<html>` eller `<body>`.</p>
 
-  <p class="tip">Om varken en `render`-funktion eller ett `template`-alternativ existerar kommer HTML i DOM av monteringselementet att exraheras som template (mall). I dessa tillfällen borde runtime + kompilator-utgåvan av Vue användas.</p>
+  <p class="tip">Om varken en `render`-funktion eller ett `template`-alternativ existerar kommer HTML i DOM av monteringselementet att exraheras som template (mall) (TRANSLATE!). I dessa tillfällen borde runtime + kompilator-utgåvan (TRANSLATE?) av Vue användas.</p>
 
 - **Läs även:**
-  - [Lifecycle-diagram](../guide/instance.html#Lifecycle-Diagram)
+  - [Lifecycle-diagram (TRANSLATE?)](../guide/instance.html#Lifecycle-Diagram)
   - [Runtime + kompilator vs. endast runtime](../guide/installation.html#Runtime-Compiler-vs-Runtime-only)
 
 ### template
@@ -735,16 +735,16 @@ type: api
 
 - **Detaljer:**
 
-  En template (mall) i textsträngformat att användas som markup för Vue-instansen. Denna template kommer **ersätta** det monterade elementet. All existerande markup i det monterade elementet kommer bli ignorerat, såvida inte innehållsdistribuerande slots existerar i template.
+  En template (mall) (TRANSLATE?) i textsträngformat att användas som markup för Vue-instansen. Denna template (TRANSLATE!) kommer **ersätta** det monterade elementet. All existerande markup i det monterade elementet kommer bli ignorerat, såvida inte innehållsdistribuerande slots existerar i template (TRANSLATE!).
 
-  Om textsträngen startar med `#` kommer den användas som en querySelector och använda det valda elementets innerHTML för template. Detta möjliggör användandet av det vanliga `<script type="x-template">`-tricket för att inkludera templates.
+  Om textsträngen startar med `#` kommer den användas som en querySelector och använda det valda elementets innerHTML för template (TRANSLATE!). Detta möjliggör användandet av det vanliga `<script type="x-template">`-tricket för att inkludera templates (TRANSLATE!).
 
-  <p class="tip">Från ett säkerhetsperspektiv borde du endast använda Vue-templates som du litar på. Lita aldrig på templates som genererats av användare.</p>
+  <p class="tip">Från ett säkerhetsperspektiv borde du endast använda Vue-templates (TRANSLATE!) som du litar på. Lita aldrig på templates (TRANSLATE!) som genererats av användare.</p>
 
-  <p class="tip">Om en renderingsfunktion existerar i Vue-alternativen kommer template att ignoreras.</p>
+  <p class="tip">Om en renderingsfunktion existerar i Vue-alternativen kommer template (TRANSLATE!) att ignoreras.</p>
 
 - **Läs även:**
-  - [Lifecycle-diagram](../guide/instance.html#Lifecycle-Diagram)
+  - [Lifecycle-diagram (TRANSLATE?)](../guide/instance.html#Lifecycle-Diagram)
   - [Innehållsdistribution med slots](../guide/components.html#Content-Distribution-with-Slots)
 
 ### render
@@ -753,11 +753,11 @@ type: api
 
   - **Detaljer:**
 
-    Ett alternativ för textsträng-templates som låter dig utnyttja JavaScripts fullständiga programmatiska kraft. Renderfunktionen mottar som sitt första argument en `createElement`-metod som användas för att skapa `VNode`s.
+    Ett alternativ för textsträng-templates (TRANSLATE!) som låter dig utnyttja JavaScripts fullständiga programmatiska kraft. Renderfunktionen mottar som sitt första argument en `createElement`-metod som användas för att skapa `VNode`s.
 
     Om komponenten är en funktionell komponent mottar renderfunktionen ett extra argument, `context`, som förser tillgång till kontextuell data. Detta eftersom funktionella komponenter är instanslösa.
 
-    <p class="tip">`render`-funktionen har prioritet före renderfunktioner som kompilerats från `template`-alternativ eller HTML i DOM templates på det monterade elementet, vilka har blivit specifierade i `el`-alternativet.</p>
+    <p class="tip">`render`-funktionen har prioritet före renderfunktioner som kompilerats från `template`-alternativ (TRANSLATE!) eller HTML i DOM templates (TRANSLATE!) på det monterade elementet, vilka har blivit specifierade i `el`-alternativet.</p>
 
   - **Läs även:** [Renderfunktioner](../guide/render-function.html)
 
@@ -771,7 +771,7 @@ type: api
 
     **Fungerar endast i utvecklingsläge.**
 
-    En alternativ render-output då den ursprungliga `render`-funktionen stöter på ett fel. Felet skickas till `renderError` i det andra argumentet. Detta är särskilt användbart då det används tillsammans med hot-reload.
+    En alternativ render-output (TRANSLATE?) då den ursprungliga `render`-funktionen stöter på ett fel. Felet skickas till `renderError` i det andra argumentet. Detta är särskilt användbart då det används tillsammans med hot-reload (TRANSLATE!).
 
   - **Exempel:**
 
