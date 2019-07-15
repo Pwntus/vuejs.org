@@ -2677,6 +2677,6 @@ Used to denote a `<template>` element as a scoped slot.
 
 - Please refer to the [VNode class declaration](https://github.com/vuejs/vue/blob/dev/src/core/vdom/vnode.js).
 
-## Server-Side Rendering
+## Rendering på serversidan
 
-- Please refer to the [vue-server-renderer package documentation](https://github.com/vuejs/vue/tree/dev/packages/vue-server-renderer).
+- Vänligen se dokumentationen för [vue-server-renderer paketet](https://github.com/vuejs/vue/tree/dev/packages/vue-server-renderer).
