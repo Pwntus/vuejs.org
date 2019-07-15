@@ -745,7 +745,7 @@ type: api
 
 - **Läs även:**
   - [Lifecycle-diagram (TRANSLATE?)](../guide/instance.html#Lifecycle-Diagram)
-  - [Innehållsdistribution med slots](../guide/components.html#Content-Distribution-with-Slots)
+  - [Innehållsdistribution med slots (TRANSLATE?)](../guide/components.html#Content-Distribution-with-Slots)
 
 ### render
 
@@ -2663,15 +2663,15 @@ Used to denote a `<template>` element as a scoped slot.
 ### slot
 
 - **Props:**
-  - `name` - string, Used for named slot.
+  - `name` - textsträng, används för en namngiven slot (TRANSLATE!).
 
-- **Usage:**
+- **Användning:**
 
-  `<slot>` serve as content distribution outlets in component templates. `<slot>` itself will be replaced.
+  `<slot>` fungerar som innehållsdistribuerande uttag i komponent-templates. `<slot>` kommer själv att ersättas.
 
-  For detailed usage, see the guide section linked below.
+  För detaljerad användning, se guideavsnittet som är länkat nedan.
 
-- **See also:** [Content Distribution with Slots](../guide/components.html#Content-Distribution-with-Slots)
+- **Läs även:** [Innehållsdistribution med slots (TRANSLATE?)](../guide/components.html#Content-Distribution-with-Slots)
 
 ## VNode-gränssnittet
 
